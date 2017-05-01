@@ -1,0 +1,35 @@
+import javax.swing.*;
+
+public class Layout
+{
+    JFrame jframe = new JFrame();
+    JPanel jpanel = new JPanel();
+    JButton [] bt = new JButton[4];
+
+    Public Layout()
+    {
+        for(int i=0;i<bt.length;i++){
+            bt[i] = new JButton("Number"+i+"button")
+        }
+        
+        jpanel.add(bt[0]);
+        jpanel.add(bt[1]);
+        
+        jframe.add(jpanel, "North");
+        jframe.add(bt[2], "West");
+        jframe.add(bt[3], "Center");
+        
+        jframe.setSize(400,400);
+        jframe.setVisible(true);
+        
+        jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+    }
+    
+    public static void main(String[] args){
+    
+    new Layout();
+    
+    }
+    
+}
